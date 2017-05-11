@@ -36,7 +36,6 @@ function isArrayMultiple(preArray) {
     var trigger = false;
     var array = preArray.split(" ");
     
-
     for(i=0; i < (array.length - 1); i++){
         if(trigger === false){
             if((array[i+1]-array[i]) != 1){
@@ -48,7 +47,6 @@ function isArrayMultiple(preArray) {
 }
 
 function first(array,n){
-    
     var newArray = [];
     
     if(n == undefined){
