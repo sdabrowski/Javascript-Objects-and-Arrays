@@ -1,7 +1,7 @@
 function currentDate() {
     var today = new Date();
     var date = (today.getMonth()+1) + "/" + today.getDate() + "/" + today.getFullYear();
-    alert("The date is: " + date);
+    alert("The date is: " + today.toLocaleDateString());
 }
 
 function isLeapYear(date) {
@@ -36,11 +36,12 @@ function isArrayMultiple(preArray) {
     var trigger = false;
     var array = preArray.split(" ");
     
-
-    for(i=0; i < (array.length - 1); i++){
+    for(i=0; i < (array.length); i++){
         if(trigger === false){
-            if((array[i+1]-array[i]) != 1){
-            trigger = true;
+            for(j=i; j < (array.length-1); j++){
+                if(array[i] - array[j+1] === 0){
+                    trigger = true;
+                }
             }
         }
     }
