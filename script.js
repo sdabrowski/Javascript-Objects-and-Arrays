@@ -73,9 +73,34 @@ function arrayToString() {
     var myColor = ["Red", "Green", "White", "Black"];
     var firstString = "";
 
-    myColor.forEach(function(item){firstString = firstString + ", " + item});
+    myColor.forEach(function(element){firstString = firstString + ", " + element});
     var myString = firstString.slice(2);
 
     alert(myString);
     console.log(myString);
 }
+
+//Question 7
+function mostFrequent(inputArray) {
+    inputArray.forEach(function(element){
+        
+        
+    });
+    // inputArray.sort Thinking of sorting the array first and checking incremental elements. Somehow maybe assign new variable names to each unique element and come up with a variable counter assigned to each element. Display the largest counter and variable.
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
