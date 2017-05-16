@@ -40,11 +40,7 @@ function isArrayMultiple(preArray) {
     var trigger = false;
     var array = preArray.split(" ");
     
-<<<<<<< HEAD
     for(i=0; i < (array.length - 1); i++){
-=======
-    for(i=0; i < (array.length); i++){
->>>>>>> origin/master
         if(trigger === false){
             for(j=i; j < (array.length-1); j++){
                 if(array[i] - array[j+1] === 0){
