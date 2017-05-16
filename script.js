@@ -1,9 +1,11 @@
+//Question 1
 function currentDate() {
     var today = new Date();
     var date = (today.getMonth()+1) + "/" + today.getDate() + "/" + today.getFullYear();
     alert("The date is: " + date);
 }
 
+//Question 2
 function isLeapYear(date) {
     if(date % 400 === 0){
         alert(date + " is a leap year.");
@@ -14,6 +16,7 @@ function isLeapYear(date) {
        }
 }
 
+//Question 3
 function isArrayIncremental(preArray) {
     var trigger = true;
     var array = preArray.split(" ");
@@ -32,6 +35,7 @@ function isArrayIncremental(preArray) {
     }
 }
 
+//Question 4
 function isArrayMultiple(preArray) {
     var trigger = false;
     var array = preArray.split(" ");
@@ -46,6 +50,7 @@ function isArrayMultiple(preArray) {
     alert("Does these numbers contain multiples of the same value? " + trigger);
 }
 
+//Question 5
 function first(array,n){
     var newArray = [];
     
@@ -61,4 +66,14 @@ function first(array,n){
     return newArray;
 }
 
+//Question 6
+function arrayToString() {
+    var myColor = ["Red", "Green", "White", "Black"];
+    var firstString = "";
 
+    myColor.forEach(function(item){firstString = firstString + ", " + item});
+    var myString = firstString.slice(2);
+
+    alert(myString);
+    console.log(myString);
+}
