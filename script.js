@@ -82,11 +82,22 @@ function arrayToString() {
 
 //Question 7
 function mostFrequent(inputArray) {
-    inputArray.forEach(function(element){
+    sortedArray = inputArray.sort();
+
+    var counter = 0;
+    var stored = "";
+    for(i=0; i<sortedArray.length; i++){
+        for(j=i+1; j<sortedArray.length; j++){
+            if(sortedArray[j] === sortedArray[i])
+                {
+                    counter++;
+                    stored = sortedArray[j];
+                }
+        }
         
-        
-    });
-    // inputArray.sort Thinking of sorting the array first and checking incremental elements. Somehow maybe assign new variable names to each unique element and come up with a variable counter assigned to each element. Display the largest counter and variable.
+    }
+    alert(sortedArray);
+    alert(stored + " (" + counter + " times)");
 }
 
 
