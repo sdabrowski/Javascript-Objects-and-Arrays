@@ -84,20 +84,23 @@ function arrayToString() {
 function mostFrequent(inputArray) {
     sortedArray = inputArray.sort();
 
-    var counter = 0;
-    var stored = "";
+    var counter = [0];
+    var counterNum = 0;
+    var stored = sortedArray[0];
     for(i=0; i<sortedArray.length; i++){
         for(j=i+1; j<sortedArray.length; j++){
             if(sortedArray[j] === sortedArray[i])
-                {
-                    counter++;
-                    stored = sortedArray[j];
-                }
+                    counter[counterNum]++;                    
+            if(sortedArray[j] != sortedArray[i])
+                    counterNum++;
+                    counter[counterNum]=0;
         }
-        
+        if(counter[counterNum] > counter[counterNum-1] && ((counterNum) >0)){
+            stored = sortedArray[j];
+           }
     }
     alert(sortedArray);
-    alert(stored + " (" + counter + " times)");
+    alert(stored + " (" + Math.max(counter) + " times)");
 }
 
 
